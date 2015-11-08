@@ -57,6 +57,7 @@ public class TileDesigner {
         mainframe.add(southpanel,BorderLayout.SOUTH);
         
         toolbar= new JToolBar();
+        toolbar.setRollover(true);
         northpanel.add(toolbar);
         
         buttons=new JButton[4];
