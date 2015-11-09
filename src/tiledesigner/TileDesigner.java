@@ -7,6 +7,8 @@
 package tiledesigner;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.*;
@@ -17,14 +19,15 @@ import javax.swing.*;
  */
 public class TileDesigner {
     
-    private final String imagename[]={"pat1.gif","pat2.gif","pat3.gif","pat4.gif","pat5.gif"};
+    //private final String imagename[]={"pat1.gif","pat2.gif","pat3.gif","pat4.gif","pat5.gif"};
     
     private JFrame mainframe;
     private JPanel southpanel;
-    private JPanel centerpanel;
+    private TileCanvas centerpanel;
     private JPanel northpanel;
     private JToolBar toolbar;
     private JButton[] buttons;
+    private JButton reset;
     
     public TileDesigner()
     {
@@ -50,8 +53,9 @@ public class TileDesigner {
         });
         
         northpanel =new JPanel(new FlowLayout());
-        centerpanel=new JPanel(new BorderLayout());
-        centerpanel.setBackground(Color.red);
+        centerpanel=new TileCanvas();
+        centerpanel.setLayout(new BorderLayout());
+        //centerpanel.setBackground(Color.red);
         southpanel=new JPanel(new BorderLayout());
         southpanel.setBackground(Color.blue);
         mainframe.add(northpanel,BorderLayout.NORTH);
@@ -62,11 +66,12 @@ public class TileDesigner {
         toolbar.setRollover(true);
         northpanel.add(toolbar);
         
-        buttons=new JButton[4];
+        buttons=new JButton[5];
         buttons[0]=new JButton();
         buttons[1]=new JButton();
         buttons[2]=new JButton();
         buttons[3]=new JButton();
+        buttons[4]=new JButton();
         try 
         {
         //Image img = ImageIO.read(getClass().getResource("resources/pat1.gif"));
@@ -74,6 +79,7 @@ public class TileDesigner {
         buttons[1].setIcon(new ImageIcon("resources/pat2.gif"));
         buttons[2].setIcon(new ImageIcon("resources/pat3.gif"));
         buttons[3].setIcon(new ImageIcon("resources/pat4.gif"));
+        buttons[4].setIcon(new ImageIcon("resources/pat5.gif"));
         } 
         catch (Exception ex) 
         {
@@ -83,6 +89,60 @@ public class TileDesigner {
         toolbar.add(buttons[1]);
         toolbar.add(buttons[2]);
         toolbar.add(buttons[3]);
+        toolbar.add(buttons[4]);
+        
+        reset=new JButton("Reset");
+        southpanel.add(reset);
+        
+        
+         buttons[0].addActionListener(new ActionListener() {
+         @Override
+         public void actionPerformed(ActionEvent e) {
+            
+            centerpanel.selectedTile=0;
+         }          
+      });
+         
+         buttons[1].addActionListener(new ActionListener() {
+         @Override
+         public void actionPerformed(ActionEvent e) {
+            
+            centerpanel.selectedTile=1;
+         }          
+      });
+         
+         buttons[2].addActionListener(new ActionListener() {
+         @Override
+         public void actionPerformed(ActionEvent e) {
+            
+            centerpanel.selectedTile=2;
+         }          
+      });
+         
+         buttons[3].addActionListener(new ActionListener() {
+         @Override
+         public void actionPerformed(ActionEvent e) {
+            
+            centerpanel.selectedTile=3;
+         }          
+      });
+         
+          buttons[4].addActionListener(new ActionListener() {
+         @Override
+         public void actionPerformed(ActionEvent e) {
+            
+            centerpanel.selectedTile=4;
+         }          
+      });
+         reset.addActionListener(new ActionListener() {
+         @Override
+         public void actionPerformed(ActionEvent e) {
+            
+            centerpanel.ResetGridTile();
+         }          
+      });
+         
+       
     }
     
 }
