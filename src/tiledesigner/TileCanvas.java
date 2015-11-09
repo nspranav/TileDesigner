@@ -1,8 +1,8 @@
 /*
- * Assignment 2
- * Application to demonstrate the Rock/Paper/Scissors game
- * Programmers: Ns Pranav(Z1751125), Sneha Manthani(Z
- * Due Date:
+ * Assignment 4
+ * Application to Graphially demonstrate a Tile Designer
+ * Programmers: Ns Pranav(Z1751125), Sneha Manthani(Z1748183)
+ * Due Date:11-13-2015
  */
 package tiledesigner;
 
