@@ -13,10 +13,6 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.*;
 
-/**
- *
- * @author pranavns
- */
 public class TileDesigner {
     
     //private final String imagename[]={"pat1.gif","pat2.gif","pat3.gif","pat4.gif","pat5.gif"};
