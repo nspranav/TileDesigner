@@ -50,7 +50,7 @@ public class TileDesigner {
          }
         });
         
-        northpanel =new JPanel(new FlowLayout());
+        northpanel =new JPanel(new BorderLayout());
         centerpanel=new TileCanvas();
         centerpanel.setLayout(new BorderLayout());
         //centerpanel.setBackground(Color.red);
