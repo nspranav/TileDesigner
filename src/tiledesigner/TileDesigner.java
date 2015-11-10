@@ -37,6 +37,8 @@ public class TileDesigner {
     
     private void prepareGUI()
     {
+        //Object ob= new Object();
+        //System.out.println(ob.toString());
         mainframe= new JFrame("Tile Designer");
         mainframe.setVisible(true);
         mainframe.setSize(400,400);
@@ -90,7 +92,7 @@ public class TileDesigner {
         reset=new JButton("Reset");
         southpanel.add(reset);
         
-        
+        //action listeners
          buttons[0].addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent e) {
