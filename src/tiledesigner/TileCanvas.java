@@ -91,7 +91,7 @@ public void paintComponent(Graphics g)	//Implementing paint component
   int panelWidth = getWidth();
   int panelHeight = getHeight();
   startX = (panelWidth-gridWidth)/2;//get starting point to draw grid based 
-  
+  startY= (panelHeight-gridHeight)/2;
 
  //Drawing empty grid of 5*5 with an inner outer loop
   
