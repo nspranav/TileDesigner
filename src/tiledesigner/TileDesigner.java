@@ -2,18 +2,20 @@
  * Assignment 4
  * Application to Graphially demonstrate a Tile Designer
  * Programmers: Ns Pranav(Z1751125), Sneha Manthani(Z1748183)
- * Due Date:11-13-2015
+ * Due Date:11-10-2015
  */
 package tiledesigner;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.*;
 
-public class TileDesigner {
+public class TileDesigner extends JFrame implements KeyListener {
     
     //private final String imagename[]={"pat1.gif","pat2.gif","pat3.gif","pat4.gif","pat5.gif"};
     
@@ -92,7 +94,7 @@ public class TileDesigner {
         reset=new JButton("Reset");
         southpanel.add(reset);
         
-        //action listeners
+        //adding action listeners
          buttons[0].addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent e) {
@@ -140,7 +142,29 @@ public class TileDesigner {
          }          
       });
          
+  
        
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    if(e.getKeyCode() == KeyEvent.VK_R)
+        {
+            centerpanel .ResetGridTile();
+            repaint();
+        }
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
+
