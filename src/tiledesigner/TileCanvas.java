@@ -21,7 +21,9 @@ int gridWidth;
 int gridHeight;
 int startX,startY;
 
-static final int squareSide = 25; int gridRows,gridCols=5;						
+
+
+static final int squareSide = 25; int gridRows=5,gridCols=5;						
 int[][] tilesArray = new int[gridRows][gridCols];  //row is y, col is x
 public int selectedTile;
 String[] images = {"resources/pat1.gif","resources/pat2.gif","resources/pat3.gif","resources/pat4.gif","resources/pat5.gif"};
