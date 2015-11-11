@@ -2,7 +2,7 @@
  * Assignment 4
  * Application to Graphially demonstrate a Tile Designer
  * Programmers: Ns Pranav(Z1751125), Sneha Manthani(Z1748183)
- * Due Date:11-13-2015
+ * Due Date:11-10-2015
  */
 package tiledesigner;
 
